@@ -1,12 +1,55 @@
-# React + Vite
+# Money Guard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Money Guard, kişisel finans yönetimi için geliştirilmiş bir React uygulamasıdır. Gelir ve giderlerinizi takip edebilir, döviz kurlarını görüntüleyebilir ve finansal istatistiklerinizi analiz edebilirsiniz.
 
-Currently, two official plugins are available:
+## Özellikler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Kullanıcı kaydı ve giriş/çıkış işlemleri
+- Gelir/gider işlemlerinin eklenmesi, düzenlenmesi ve silinmesi
+- Döviz kuru tablosu
+- Finansal istatistikler ve raporlar
+- Responsive tasarım (mobil ve masaüstü uyumlu)
+- Redux ile global durum yönetimi
+- Kalıcı oturum için redux-persist entegrasyonu
 
-## Expanding the ESLint configuration
+## Kurulum
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Depoyu klonlayın:
+   ```sh
+   git clone https://github.com/kullanici-adi/Guard.git
+   cd Guard
+   ```
+
+2. Bağımlılıkları yükleyin:
+   ```sh
+   npm install
+   ```
+
+3. Geliştirme sunucusunu başlatın:
+   ```sh
+   npm run dev
+   ```
+
+4. Uygulamayı [http://localhost:5173](http://localhost:5173) adresinde görüntüleyebilirsiniz.
+
+## Proje Yapısı
+
+- `src/components/` — Uygulama bileşenleri (Navbar, Balance, TransactionsList, vb.)
+- `src/pages/` — Sayfa bileşenleri (HomePage, LoginPage, RegistrationPage, vb.)
+- `src/redux/` — Redux store ve slice dosyaları
+- `public/` — Statik dosyalar ve görseller
+
+## Kullanılan Teknolojiler
+
+- React
+- Redux Toolkit & Redux Persist
+- React Router
+- Formik & Yup
+- Axios
+- Vite
+
+## Katkıda Bulunma
+
+Katkıda bulunmak için lütfen bir fork oluşturun ve pull request gönderin.
+
+---
