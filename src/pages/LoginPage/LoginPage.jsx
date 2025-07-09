@@ -101,6 +101,7 @@ const LoginPage = () => {
               onClick={() => {
                 navigate("/register", { replace: false });
               }}
+              type="button"
               className={css.LoginPage_Button}
             >
               Register

@@ -45,6 +45,7 @@ export const logOut = createAsyncThunk("auth/logot", async (_, thunkAPI) => {
   try {
     await axios.delete("/api/auth/sign-out");
     clearAuthHeader();
+    localStorage.removeItem("persist:token");
     return;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
