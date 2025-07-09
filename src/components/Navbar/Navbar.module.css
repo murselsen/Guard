@@ -1,0 +1,73 @@
+.Navbar_Area {
+    height: 60px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(270.02deg, #2E1746 3.2%, #2E225F 99.98%);
+    color: white;
+    box-shadow: 0px 4px 40px 0px #00000040, 0px -3px 2px 0px #0000001A inset;
+}
+
+.Navbar_Area .Navbar_Logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.Navbar_Logo .Navbar_Logo_Image {
+    width: 17px;
+    height: 17px;
+}
+
+.Navbar_Logo .Navbar_Logo_Title {
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12.84px;
+
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+
+.Navbar_Area .Navbar_Auth {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: #FFFFFF99;
+
+}
+
+.Navbar_Auth .Navbar_Auth_ProfileName {
+    width: max-content;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+}
+
+.Navbar_Auth .Navbar_Auth_Button {
+    display: flex;
+    gap: 8px;
+    background: transparent;
+    border: none;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    cursor: pointer;
+}
+
+.Navbar_Auth .Navbar_Auth_Button .Auth_Button_Text {
+    display: none;
+}
+
+@media (min-width: 1280px) {
+    .Navbar_Area {
+        width: 100%;
+    }
+}

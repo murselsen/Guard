@@ -1,0 +1,41 @@
+.CurrenyTable_Container {
+    width: 100%;
+    background: #4A56E21A;
+}
+
+.CurrencyTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.CurrencyTable tr th,
+.CurrencyTable tr td {
+    padding: 13px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.CurrencyTable tr th:first-child,
+.CurrencyTable tr td:first-child {
+    text-align: left;
+}
+
+
+
+.CurrencyTable .CurrencyTable_Header {
+    background: #FFFFFF33;
+}
+
+.CurrencyTable .CurrencyTable_Header th {
+
+    font-weight: 600;
+    font-size: 16px;
+
+    line-height: 100%;
+    letter-spacing: 0%;
+}

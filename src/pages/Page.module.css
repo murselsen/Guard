@@ -1,0 +1,60 @@
+.Page {
+    height: 100vh;
+    background: url("../assets/images/RegisterBckgrnd-Mobile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .Page {
+        height: 100%;
+        gap: 20px;
+        padding-inline: 32px;
+    }
+
+    .Page .Sidebar {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+
+    }
+
+    .Page .Sidebar>div {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1280px) {
+    .Page {
+        /* height: 100vh; */
+        background: url("../assets/images/RegisterBckgrnd-Mobile.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 0px;
+        column-gap: 70px;
+    }
+
+    .Page .Sidebar {
+        height: 90%;
+        flex: 1;
+        border-inline-end: 1px solid #FFFFFF99;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+
+
+    .Page .PageContent {
+        flex: 2;
+        padding: 46px 16px;
+    }
+}

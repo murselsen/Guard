@@ -1,0 +1,29 @@
+.Balance_Area {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px 32px;
+    background: #523B7E99;
+    margin: 0 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(100px);
+    box-shadow: 0px 4px 60px 0px #00000040;
+}
+
+.Balance_Area .Balance_SubTitle {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.Balance_Area .Balance_Value {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #FBFBFB;
+}
