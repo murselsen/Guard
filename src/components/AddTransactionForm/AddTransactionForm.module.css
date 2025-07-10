@@ -1,0 +1,20 @@
+@media (max-width: 767px) {
+    .TransactionForm {
+        padding: 28px 20px;
+        border: 1px solid #000;
+        border-radius: 8px;
+    }
+
+    .FormRow {
+        display: flex;
+        gap: 20px;
+    }
+
+    .FormRow .switchBox {
+        display: flex;
+    }
+
+    .FormRow .switchBox .switchInput {
+        visibility: hidden;
+    }
+}

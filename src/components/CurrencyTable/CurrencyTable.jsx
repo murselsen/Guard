@@ -5,21 +5,25 @@ const CurrencyTable = () => {
   return (
     <div className={css.CurrencyTable_Container}>
       <table className={css.CurrencyTable}>
-        <tr className={css.CurrencyTable_Header}>
-          <th>Currency</th>
-          <th>Purchase</th>
-          <th>Sale</th>
-        </tr>
-        <tr>
-          <td>USD</td>
-          <td>1.00</td>
-          <td>1.02</td>
-        </tr>
-        <tr>
-          <td>EUR</td>
-          <td>1.10</td>
-          <td>1.12</td>
-        </tr>
+        <thead>
+          <tr className={css.CurrencyTable_Header}>
+            <th>Currency</th>
+            <th>Purchase</th>
+            <th>Sale</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>USD</td>
+            <td>1.00</td>
+            <td>1.02</td>
+          </tr>
+          <tr>
+            <td>EUR</td>
+            <td>1.10</td>
+            <td>1.12</td>
+          </tr>
+        </tbody>
       </table>
       <img src={CurrenyGraphics} width={"100%"} />
     </div>
