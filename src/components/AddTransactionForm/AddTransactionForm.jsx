@@ -23,6 +23,7 @@ const schema = yup.object().shape({
 });
 
 const AddTransactionForm = () => {
+  const [income, setIncome] = useState(false);
   return (
     <Formik validationSchema={schema} onSubmit={() => {}} initialValues={{}}>
       <Form className={css.TransactionForm}>
