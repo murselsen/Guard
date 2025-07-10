@@ -50,9 +50,11 @@ const TransactionsListMobileItem = ({ transaction }) => {
       <div className={css.transactionItem_Row}>
         <h6 className={css.Key}>Category</h6>
         <span className={css.Value}>
-          {categoriesData.find(
-            (category) => category.id === transaction.categoryId
-          ).name || "Uncategorized"}
+          {categoriesData
+            ? categoriesData.find(
+                (category) => category.id === transaction.categoryId
+              ).name
+            : "Uncategorized"}
         </span>
       </div>
       <div className={css.transactionItem_Row}>
@@ -90,7 +92,6 @@ const TransactionsListMobileItem = ({ transaction }) => {
               strokeLinejoin="round"
             />
           </svg>
-         
         </button>
       </div>
     </div>
