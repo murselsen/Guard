@@ -22,28 +22,26 @@ const TransactionsListDesktop = () => {
         </th>
         <th></th>
       </tr>
-      {data && data.length > 0
-        ? data.map((transaction) => (
-            <TransactionsListDesktop_Item
-              key={transaction.id}
-              transaction={transaction}
-            />
-          ))
-        : null}
+      <tbody>
+        {data && data.length > 0
+          ? data.map((transaction) => (
+              <TransactionsListDesktop_Item
+                key={transaction.id}
+                transaction={transaction}
+              />
+            ))
+          : null}
+      </tbody>
     </table>
   );
 };
 
 const TransactionsListDesktop_Item = ({ transaction }) => {
   const [isIncome, setIsIncome] = React.useState(false);
-  const [categoriesData, setCategoriesData] = React.useState([]);
-  const resutlCategoriesData = useSelector(
-    (state) => state.transaction.category
-  );
   React.useEffect(() => {
     setIsIncome(transaction.type === "INCOME");
-    setCategoriesData(resutlCategoriesData);
-  }, [transaction.type, resutlCategoriesData]);
+  }, [transaction.type]);
+  const categoriesData = useSelector((state) => state.transaction.category);
 
   console.log(
     "Category Name: ",
@@ -55,7 +53,7 @@ const TransactionsListDesktop_Item = ({ transaction }) => {
       <td className={css.date}>{transaction.transactionDate}</td>
       <td className={css.type}>{isIncome ? "+" : "-"}</td>
       <td className={css.category}>
-        {categoriesData
+        {categoriesData.length > 0
           ? categoriesData.find(
               (category) => category.id === transaction.categoryId
             ).name
