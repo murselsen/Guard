@@ -36,14 +36,24 @@ const TransactionsListDesktop = () => {
 
 const TransactionsListDesktop_Item = ({ transaction }) => {
   const [isIncome, setIsIncome] = React.useState(false);
+  const [categoriesData, setCategoriesData] = React.useState([]);
+  const resutlCategoriesData = useSelector(
+    (state) => state.transaction.category
+  );
   React.useEffect(() => {
     setIsIncome(transaction.type === "INCOME");
-  }, [transaction.type]);
-  const categoriesData = useSelector((state) => state.transaction.category);
+    setCategoriesData(resutlCategoriesData);
+  }, [transaction.type, resutlCategoriesData]);
+
+  console.log(
+    "Category Name: ",
+    categoriesData.find((category) => category.id === transaction.categoryId)
+      .name
+  );
   return (
     <tr className={css.transactionsList_Table_Row}>
       <td className={css.date}>{transaction.transactionDate}</td>
-      <td className={css.type}>{transaction.type === "INCOME" ? "+" : "-"}</td>
+      <td className={css.type}>{isIncome ? "+" : "-"}</td>
       <td className={css.category}>
         {categoriesData
           ? categoriesData.find(
@@ -54,9 +64,7 @@ const TransactionsListDesktop_Item = ({ transaction }) => {
       <td className={css.comment}>{transaction.comment}</td>
       <td>
         <span className={css.sum}>
-          <span
-            className={transaction.type === "INCOME" ? css.income : css.expense}
-          >
+          <span className={isIncome ? css.income : css.expense}>
             {transaction.amount}
           </span>
         </span>
