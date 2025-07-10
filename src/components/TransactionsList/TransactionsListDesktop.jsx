@@ -45,9 +45,11 @@ const TransactionsListDesktop_Item = ({ transaction }) => {
       <td className={css.date}>{transaction.transactionDate}</td>
       <td className={css.type}>{transaction.type === "INCOME" ? "+" : "-"}</td>
       <td className={css.category}>
-        {categoriesData.find(
-          (category) => category.id === transaction.categoryId
-        ).name || "Uncategorized"}
+        {categoriesData
+          ? categoriesData.find(
+              (category) => category.id === transaction.categoryId
+            ).name
+          : "Uncategorized"}
       </td>
       <td className={css.comment}>{transaction.comment}</td>
       <td>
