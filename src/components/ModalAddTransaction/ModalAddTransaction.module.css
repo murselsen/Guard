@@ -16,5 +16,10 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+
+    }
+
+    .ModalArea {
+        padding: 40px 20px;
     }
 }
